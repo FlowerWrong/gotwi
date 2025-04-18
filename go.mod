@@ -1,8 +1,11 @@
-module github.com/michimani/gotwi
+module github.com/FlowerWrong/gotwi
 
 go 1.22
 
-require github.com/stretchr/testify v1.10.0
+require (
+	github.com/michimani/gotwi v0.17.0
+	github.com/stretchr/testify v1.10.0
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

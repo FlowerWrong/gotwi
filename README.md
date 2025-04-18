@@ -1,7 +1,7 @@
 gotwi
 ===
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/michimani/gotwi.svg)](https://pkg.go.dev/github.com/michimani/gotwi)
+[![Go Reference](https://pkg.go.dev/badge/github.com/FlowerWrong/gotwi.svg)](https://pkg.go.dev/github.com/FlowerWrong/gotwi)
 [![Twitter API v2](https://img.shields.io/endpoint?url=https%3A%2F%2Ftwbadges.glitch.me%2Fbadges%2Fv2)](https://developer.twitter.com/en/docs/twitter-api)
 [![codecov](https://codecov.io/gh/michimani/gotwi/branch/main/graph/badge.svg?token=NA873TE6RV)](https://codecov.io/gh/michimani/gotwi)
 
@@ -109,10 +109,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/fields"
-	"github.com/michimani/gotwi/user/userlookup"
-	"github.com/michimani/gotwi/user/userlookup/types"
+	"github.com/FlowerWrong/gotwi"
+	"github.com/FlowerWrong/gotwi/fields"
+	"github.com/FlowerWrong/gotwi/user/userlookup"
+	"github.com/FlowerWrong/gotwi/user/userlookup/types"
 )
 
 func main() {
@@ -181,9 +181,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/managetweet"
-	"github.com/michimani/gotwi/tweet/managetweet/types"
+	"github.com/FlowerWrong/gotwi"
+	"github.com/FlowerWrong/gotwi/tweet/managetweet"
+	"github.com/FlowerWrong/gotwi/tweet/managetweet/types"
 )
 
 func main() {
@@ -247,10 +247,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/fields"
-	"github.com/michimani/gotwi/user/userlookup"
-	"github.com/michimani/gotwi/user/userlookup/types"
+	"github.com/FlowerWrong/gotwi"
+	"github.com/FlowerWrong/gotwi/fields"
+	"github.com/FlowerWrong/gotwi/user/userlookup"
+	"github.com/FlowerWrong/gotwi/user/userlookup/types"
 )
 
 func main() {
@@ -366,11 +366,11 @@ if err != nil {
 
 ## More examples
 
-See [_examples](https://github.com/michimani/gotwi/tree/main/_examples) directory.
+See [_examples](https://github.com/FlowerWrong/gotwi/tree/main/_examples) directory.
 
 # Licence
 
-[MIT](https://github.com/michimani/gotwi/blob/main/LICENCE)
+[MIT](https://github.com/FlowerWrong/gotwi/blob/main/LICENCE)
 
 # Author
 

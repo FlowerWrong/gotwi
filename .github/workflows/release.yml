@@ -21,7 +21,7 @@ jobs:
         run: go install
 
       - name: Test code
-        run: go test github.com/michimani/gotwi/... -shuffle=on
+        run: go test github.com/FlowerWrong/gotwi/... -shuffle=on
 
   setup-release:
     name: Setup release
