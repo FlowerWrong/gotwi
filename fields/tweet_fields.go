@@ -24,6 +24,10 @@ const (
 	TweetFieldText               TweetField = "text"
 	TweetFieldWithheld           TweetField = "withheld"
 	TweetFieldNoteTweet          TweetField = "note_tweet"
+	TweetFieldArticle            TweetField = "article"
+	TweetFieldDisplayTextRange   TweetField = "display_text_range"
+	TweetFieldEditControls       TweetField = "edit_controls"
+	TweetFieldMediaMetadata      TweetField = "media_metadata"
 )
 
 func (f TweetField) String() string {

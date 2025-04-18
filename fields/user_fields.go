@@ -11,6 +11,7 @@ const (
 	UserFieldName              UserField = "name"
 	UserFieldPinnedTweetID     UserField = "pinned_tweet_id"
 	UserFieldProfileImageUrl   UserField = "profile_image_url"
+	UserFieldProfileBannerUrl  UserField = "profile_banner_url"
 	UserFieldProtected         UserField = "protected"
 	UserFieldPublicMetrics     UserField = "public_metrics"
 	UserFieldUrl               UserField = "url"
@@ -18,6 +19,11 @@ const (
 	UserFieldVerified          UserField = "verified"
 	UserFieldWithheld          UserField = "withheld"
 	UserFieldMostRecentTweetID UserField = "most_recent_tweet_id"
+	UserFieldAffiliation       UserField = "affiliation"
+	UserFieldConnectionStatus  UserField = "connection_status"
+	UserFieldReceivesYourDm    UserField = "receives_your_dm"
+	UserFieldSubscriptionType  UserField = "subscription_type"
+	UserFieldVerifiedType      UserField = "verified_type"
 )
 
 func (f UserField) String() string {

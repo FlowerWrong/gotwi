@@ -3,28 +3,32 @@ package resources
 import "time"
 
 type Tweet struct {
-	ID                  *string             `json:"id"`
-	Text                *string             `json:"text"`
-	EditHistoryTweetIDs []*string           `json:"edit_history_tweet_ids"`
-	Attachments         *TweetAttachments   `json:"attachments,omitempty"`
-	AuthorID            *string             `json:"author_id,omitempty"`
-	ContextAnnotations  []ContextAnnotation `json:"context_annotations,omitempty"`
-	ConversationID      *string             `json:"conversation_id,omitempty"`
-	CreatedAt           *time.Time          `json:"created_at,omitempty"`
-	Entities            *TweetEntities      `json:"entities,omitempty"`
-	Geo                 *Geo                `json:"geo,omitempty"`
-	InReplyToUserID     *string             `json:"in_reply_to_user_id,omitempty"`
-	Lang                *string             `json:"lang,omitempty"`
-	NonPublicMetrics    *NonPublicMetrics   `json:"non_public_metrics,omitempty"`
-	OrganicMetrics      *OrganicMetrics     `json:"organic_metrics,omitempty"`
-	PossiblySensitive   *bool               `json:"possibly_sensitive,omitempty"`
-	PromotedMetrics     *PromotedMetrics    `json:"promoted_metrics,omitempty"`
-	PublicMetrics       *TweetPublicMetrics `json:"public_metrics,omitempty"`
-	ReferencedTweets    []ReferencedTweet   `json:"referenced_tweets,omitempty"`
-	ReplySettings       *string             `json:"reply_settings,omitempty"`
-	Source              *string             `json:"source,omitempty"`
-	Withheld            *TweetWithheld      `json:"withheld,omitempty"`
-	NoteTweet           *TweetNoteTweet     `json:"note_tweet,omitempty"`
+	ID                  *string              `json:"id"`
+	Text                *string              `json:"text"`
+	EditHistoryTweetIDs []*string            `json:"edit_history_tweet_ids"`
+	Attachments         *TweetAttachments    `json:"attachments,omitempty"`
+	AuthorID            *string              `json:"author_id,omitempty"`
+	ContextAnnotations  []ContextAnnotation  `json:"context_annotations,omitempty"`
+	ConversationID      *string              `json:"conversation_id,omitempty"`
+	CreatedAt           *time.Time           `json:"created_at,omitempty"`
+	Entities            *TweetEntities       `json:"entities,omitempty"`
+	Geo                 *Geo                 `json:"geo,omitempty"`
+	InReplyToUserID     *string              `json:"in_reply_to_user_id,omitempty"`
+	Lang                *string              `json:"lang,omitempty"`
+	NonPublicMetrics    *NonPublicMetrics    `json:"non_public_metrics,omitempty"`
+	OrganicMetrics      *OrganicMetrics      `json:"organic_metrics,omitempty"`
+	PossiblySensitive   *bool                `json:"possibly_sensitive,omitempty"`
+	PromotedMetrics     *PromotedMetrics     `json:"promoted_metrics,omitempty"`
+	PublicMetrics       *TweetPublicMetrics  `json:"public_metrics,omitempty"`
+	ReferencedTweets    []ReferencedTweet    `json:"referenced_tweets,omitempty"`
+	ReplySettings       *string              `json:"reply_settings,omitempty"`
+	Source              *string              `json:"source,omitempty"`
+	Withheld            *TweetWithheld       `json:"withheld,omitempty"`
+	NoteTweet           *TweetNoteTweet      `json:"note_tweet,omitempty"`
+	DisplayTextRange    []*int               `json:"display_text_range,omitempty"`
+	EditControls        *TweetEditControls   `json:"edit_controls,omitempty"`
+	MediaMetadata       []TweetMediaMetadata `json:"media_metadata,omitempty"`
+	Article             *TweetArticle        `json:"article,omitempty"`
 }
 
 type TweetAttachments struct {
@@ -118,10 +122,40 @@ type PromotedMetrics struct {
 }
 
 type TweetPublicMetrics struct {
-	RetweetCount *int `json:"retweet_count"`
-	ReplyCount   *int `json:"reply_count"`
-	LikeCount    *int `json:"like_count"`
-	QuoteCount   *int `json:"quote_count"`
+	RetweetCount    *int `json:"retweet_count"`
+	ReplyCount      *int `json:"reply_count"`
+	LikeCount       *int `json:"like_count"`
+	QuoteCount      *int `json:"quote_count"`
+	BookmarkCount   *int `json:"bookmark_count"`
+	ImpressionCount *int `json:"impression_count"`
+}
+
+type TweetEditControls struct {
+	EditsRemaining *int       `json:"edits_remaining"`
+	IsEditEligible *bool      `json:"is_edit_eligible"`
+	EditableUntil  *time.Time `json:"editable_until"`
+}
+
+type TweetMediaMetadata struct {
+	MediaKey string `json:"media_key"`
+}
+
+type TweetArticle struct {
+	Entities struct {
+		Cashtags []struct {
+			Start int    `json:"start"`
+			End   int    `json:"end"`
+			Tag   string `json:"tag"`
+		} `json:"cashtags"`
+		Urls []struct {
+			Text string `json:"text"`
+		} `json:"urls"`
+	} `json:"entities"`
+	PlainText     string   `json:"plain_text"`
+	PreviewText   string   `json:"preview_text"`
+	CoverMedia    string   `json:"cover_media"`
+	Title         string   `json:"title"`
+	MediaEntities []string `json:"media_entities"`
 }
 
 type ReferencedTweet struct {

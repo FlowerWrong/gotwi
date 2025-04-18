@@ -46,6 +46,7 @@ type NewClientInput struct {
 type NewClientWithAccessTokenInput struct {
 	HTTPClient  *http.Client
 	AccessToken string
+	Debug       bool
 }
 
 type IClient interface {
@@ -123,6 +124,7 @@ func NewClientWithAccessToken(in *NewClientWithAccessTokenInput) (*Client, error
 		Client:               defaultHTTPClient,
 		authenticationMethod: AuthenMethodOAuth2BearerToken,
 		accessToken:          in.AccessToken,
+		debug:                in.Debug,
 	}
 
 	if in.HTTPClient != nil {
