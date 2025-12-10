@@ -92,7 +92,7 @@ type URLImage struct {
 type Geo struct {
 	Coordinates struct {
 		Type        *string `json:"type"`
-		Coordinates []*int  `json:"coordinates"`
+		Coordinates []*float64  `json:"coordinates"`
 	} `json:"coordinates"`
 	PlaceID *string `json:"place_id"`
 }
